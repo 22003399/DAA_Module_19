@@ -11,11 +11,7 @@ To write a python program to sort the first half of the list using merge sort.
 5.Return the fully sorted array.   
 
 ## Program:
-```
-Program to implement Merge Sort
-Developed by: DIVYA E
-Register Number:  212223230050
-```
+
 ```py
 def mergesort(li):
     if len(li) > 1:
