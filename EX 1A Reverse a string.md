@@ -1,46 +1,43 @@
-# EX 1C Quick Sort
-## DATE: 29/10/2025
+# EX 1A Reverse a String
+## DATE:29-10-2025
 ## AIM:
-To write a python program to implement quick sort using tha last element as pivot on the list of float values.
+To write a program to create a recursive function to reverse a string.
 
 ## Algorithm
-1. Select the last element as the pivot and partition the array around it.
-2. Place elements smaller than the pivot to its left and larger to its right.
-3. Recursively apply Quick Sort to the left sub-array before the pivot.
-4. Recursively apply Quick Sort to the right sub-array after the pivot. 
-5. Repeat until the entire array is sorted and then print the sorted array.   
+1.Define a recursive function revstr that takes a string as input.
+
+2.Check if the length of the string is zero (base case).
+
+3.If true, return the string.
+
+4.Otherwise, call revstr on the substring excluding the first character and concatenate the first character at the end.
+
+5.Take input from the user and call the recursive function.
+
+6.Print the result 
+ 
 
 ## Program:
+```
+Program to implement Reverse a String
+Developed by: DIVYA E
+Register Number: 212223230050
+```
+```py
+def rev(a):
+    if len(a)==0:
+        return a
+    return rev(a[1:]) + a[0]
+    
+a=input()
+print(rev(a))
+```
 
-### Program to implement implement quick sort using the last element as pivot on the list of float values.
-**Developed by:** SRIRAJ G 
-**Register Number:** 212222040161
-```
-def fun(arr,low,high):
-    pivot=arr[high]
-    i=low-1
-    for j in range(low,high):
-        if arr[j]<pivot:
-            i += 1
-            arr[i],arr[j]=arr[j],arr[i]
-    arr[i+1],arr[high]=arr[high],arr[i+1]
-    return i+1
-def quickSort(arr,low,high):
-    if low<high:
-        pi=fun(arr,low,high)
-        quickSort(arr,low,pi-1)
-        quickSort(arr,pi+1,high)
-n=int(input())
-arr=[]
-for i in range(n):
-     arr.append(float(input())) 
-quickSort(arr,0,len(arr)-1)
-print("Sorted array is:")
-for i in range(n):
-    print("%.1f" %arr[i])
-```
 ## Output:
-![Screenshot 2025-05-24 172715](https://github.com/user-attachments/assets/b78926e9-edd1-41f3-9f5e-96669af82150)
+![image](https://github.com/user-attachments/assets/c9c73f00-243c-4dcf-aa77-8dbd5d2df114)
+
+
+
 
 ## Result:
-The program successfully sorts the input array using the QuickSort algorithm, arranging the elements in ascending order.
+The program successfully reverses the input string using recursion. When the user provides an input string, the output displays the reversed version of the string
