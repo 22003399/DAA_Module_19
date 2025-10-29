@@ -20,8 +20,8 @@ To write a program to create a recursive function to reverse a string.
 ## Program:
 ```
 Program to implement Reverse a String
-Developed by: DIVYA E
-Register Number: 212223230050
+Developed by: MOHAMED MUFFASHAL KA
+Register Number: 212222220024
 ```
 ```py
 def rev(a):
